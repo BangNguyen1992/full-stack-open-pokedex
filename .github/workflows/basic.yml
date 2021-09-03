@@ -1,0 +1,24 @@
+name: Hello World!
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    branchs:
+      - master
+
+jobs:
+  init_job:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Say hello
+        run: |
+          echo "Hello World!"
+      
+      - name: Current time
+        run: date
+
+      - name: Directory content
+        run: ls -l
